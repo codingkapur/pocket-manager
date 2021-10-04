@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pocket Manager</title>
+  </head>
+
+  <body>
+    <!-- Overlay -->
+    <div class="overlay hidden"></div>
+    <!-- Nav Bar -->
+    <nav>
+      <div class="nav-element brand-titles-element">
+        <h3 class="brand-title">Pocket Manager.</h3>
+        <p class="brand-subtitle">The ultimate Savings App</p>
+      </div>
+      <div class="nav-element logo-container">
+        <img src="../pocket manager/images/logo.png" alt="Logo" class="logo" />
+      </div>
+      <div class="nav-element open-modal-nav-elements">
+        <ul class="nav__login--elements">
+          <li class="sign-in">Sign In</li>
+          <li class="sign-up">Sign Up</li>
+        </ul>
+        <p class="nav__welcome--display hidden">Welcome back, Raghav</p>
+      </div>
+    </nav>
+    <!-- Sign In Modal -->
+
+    <div class="modal sign-in-modal hidden">
+      <i class="ion-ios-close close-modal-x"></i>
+
+      <!-- FORMS SIGN IN -->
+
+      <div class="modal-form">
+        <h1>Sign In</h1>
+        <form class="modal-form">
+          <div class="modal-form-text-field modal-username">
+            <input
+              type="text"
+              placeholder=""
+              class="modal-form-input modal-form-input-username"
+              required
+            />
+            <span></span>
+            <label for="username" class="modal-form-label">Username:</label>
+          </div>
+          <div class="modal-form-text-field modal-username">
+            <input
+              type="text"
+              placeholder=""
+              class="modal-form-input modal-form-input-password"
+              required
+            />
+            <span></span>
+            <label for="username" class="modal-form-label">Password:</label>
+          </div>
+          <div class="error-message">Username or Password Incorrect!</div>
+          <div class="modal-forgot-password">
+            <a href="#">Forgot Password?</a>
+          </div>
+          <div class="btn-sign-in-container">
+            <button class="btn-sign-in btn-form" value="Sign In">
+              Sign In
+            </button>
+            <div class="sign-up-form-text-container">
+              <p class="sign-up-form-text">
+                Don't have an account? Sign up
+                <strong class="send-to-sign-up">here</strong>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Sign Up Modal -->
+    <div class="modal sign-up-modal hidden">
+      <i class="ion-ios-close close-modal-x"></i>
+      <div class="modal-form">
+        <h1>Sign Up</h1>
+
+        <!-- FORM SIGN UP -->
+
+        <form class="modal-form">
+          <div class="modal-form-text-field modal-first-name">
+            <input
+              type="text"
+              placeholder=""
+              class="modal-form-input form__sign-up--firstname"
+              required
+            />
+            <span></span>
+
+            <label for="first-name" class="modal-form-label">First Name:</label>
+          </div>
+          <div class="modal-form-text-field modal-last-name">
+            <input
+              type="text"
+              placeholder=""
+              class="modal-form-input form__sign-up--lastname"
+              required
+            />
+            <span></span>
+
+            <label for="Last Name" class="modal-form-label">Last Name:</label>
+          </div>
+          <div class="modal-form-text-field modal-d-o-b">
+            <input
+              type="text"
+              placeholder=""
+              class="modal-form-input modal__form--pin"
+              required
+            />
+            <span></span>
+
+            <label for="" class="modal-form-label "
+              >Enter a Pin</label
+            >
+          </div>
+          <button type="submit" class="btn-sign-up btn-form" value="Sign Up">
+            Sign Up
+          </button>
+          <div class="sign-up-form-text-container">
+            <p class="sign-up-form-text">
+              Already have an account? Sign in
+              <strong class="send-to-sign-in">here</strong>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End Of Modals -->
+
+    <!-- Main Content -->
+    <main>
+      <div class="grid-container">
+        <!-- Current Balance -->
+        <div class="balance_container grid-item">
+          <div>
+            <p class="balance__label">Current balance</p>
+            <p class="balance__date">As of
+              <span class="date">26/05/2021</span>
+            </p>
+          </div>
+          <p class="balance__value">Rs. <span class="balance__amount">20,000</span></p>
+        </div>
+        <!-- Movements -->
+        <div class="movements__container grid-item">
+          <div class="movements__row">
+            <div class="movements__type movements__type--deposit">2 Deposit</div>
+            <div class="movements__date">3 days ago</div>
+            <div class="movements__value">+ Rs. 1000</div>
+          </div>
+          <div class="movements__row">
+            <div class="movements__type movements__type--withdrawal">1 Withdrawal</div>
+            <div class="movements__date">4 days ago</div>
+            <div class="movements__value">- Rs. 5000</div>
+          </div>
+        </div>
+        <!-- Operations -->
+
+        <!-- transfer Money -->
+        <div class="transfer__container grid-item">
+          <h2 class="operation__heading">Transfer Money</h2>
+          <form action="#" class="form form__transfer">
+            <input type="text" class="form__input form__input--to">
+            <input type="text" class="form__input form__input--amount">
+            <button class="form__btn form__button--transfer">&rarr;</button>
+            <label for="" class="form__label">Transfer</label>
+            <label for="" class="form__label">Amount</label>
+
+          </form>
+          </div>
+
+        <!-- Request Loan -->
+
+        <div class="request__container grid-item">
+          <h2 class="operation__heading">Request Loan</h2>
+          <form action="#" class="form form__request">
+            <input type="text" class="form__input form__input--request">
+            <button class="form__btn form__button--request">&rarr;</button>
+
+            <label for="" class="form__label form__label--request">Amount</label>
+</form> 
+          
+        </div>
+        <!-- Close Account -->
+
+        <div class="close__container grid-item">
+          <h2 class="operation__heading">Close Account</h2>
+          <form action="#" class="form form__close">
+            <input type="text" class="form__input form__input--username">
+            <input type="text" class="form__input form__input--pin">
+            <button class="form__btn form__button--close">&rarr;</button>
+            <label for="" class="form__label">Username</label>
+            <label for="" class="form__label">Pin</label>
+
+          </form>
+      </div>
+        <!-- Summary -->
+        <div class="summary__container grid-item">
+          <div class="summary__label-container">
+          <p class="summary__label">IN</p>
+          <p class="summary__label--value summary__incoming--value">0000</p>
+          <p class="summary__label">OUT</p>
+          <p class=" summary__label--value summary__outgoing--value">0000</p>
+          <p class="summary__label">Interest</p>
+          <p class="summary__label--value summary__interest--value">0000</p>
+          <button class="btn--sort">&downarrow; SORT</button>
+        </div>
+          <div class="logout__timer">
+            <p class="sign-out">Sign Out</p>
+            <p class=""></p>You will be logged out in &nbsp<span class="timer">5:00</span>
+          </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- Action and method attributes removed from forms. -->
